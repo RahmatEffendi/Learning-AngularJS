@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="IDN" ng-app="">
+
+<head>
+    <title>Belajar Angular JS</title>
+
+    <!-- js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<body>
+    <!-- ng-bind 
+            ng-bind adalah salah satu ng yang dimiliki oleh AngulasJS, ng-bind sama seperti menampilkan data 
+            dengan menggunakan ng-model, Namun cara penggunaannya berbeda. Ng-bind disisipkan pada tag dalam html, 
+            sedangkan ng-model menggunakan kurung kurawal {{ }} yang langsung ditulis bersamaan dengan String pada html
+    -->
+    <!-- <input placeholder="Input Name" type="text" ng-model="name">
+    <div ng-bind="name"></div>
+    <div>Hello {{name}}</div>
+    </div> -->
+
+    <textarea ng-model="name"></textarea>
+    <div ng-bind="name"></div>
+</body>
+
+</html>
