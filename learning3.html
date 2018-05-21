@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="IDN" ng-app="">
+
+<head>
+    <title>Belajar Angular JS</title>
+
+    <!-- js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<body>
+    <!-- Directive
+            Pada level tertinggi, directive berfungsi sebagai penanda pada element DOM(attribute, nama, 
+            komentar, css) yang memberitahukan kepada AngularJS HTML kompiler untuk mengirimkan
+            perilaku spesifik ke element DOM
+    -->
+    <!-- Contoh Directive -->
+    <input placeholder="Text Name" ng-model="name">
+    <!-- Directive disini menandakan name pada element div -->
+    <div ng-bind="name"></div>
+
+    <!-- Selain Penggunaan Diatas Directive juga bisa digunakan dengan beberapa cara -->
+    <div data-ng-bind="name"></div>
+    <div x-ng-bind="name"></div>
+    <div ng:bind="name"></div>
+    <div ng_bind="name"></div>
+
+    <!-- Beberapa cara penggunaan directive diatas dapat digunakan sesuai dengan selera developer untuk melakukan 
+         normalisasi, namun untuk tahap production disarankan menggunakan data-ng-bind="", yang diawali oleh "data"
+    -->
+</body>
+
+</html>
