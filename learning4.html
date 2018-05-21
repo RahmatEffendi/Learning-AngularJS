@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="IDN" ng-app="">
+
+<head>
+    <title>Belajar Angular JS</title>
+
+    <!-- js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<body>
+    <!-- Expression 
+            Pada AngularJS juga mengenal istilah pada Javascript yang disebut dengan Expression.
+            Pada angularJS Expression digunakan untuk nemampilkan keluaran dari inputan, sama hal nya
+            dengan penggunaan directive ng-bind, namun penggunaan expression hanya menggunakan tanda kurung 
+            kurawal {{ }}
+    -->
+
+    <!-- Contoh Penggunaan Expression -->
+    <input placeholder="Type Name Here!" ng-model="name">
+    <div>Hello {{name}}, Welcome to My Tutorial</div><br>
+
+    <!-- Tidak hanya mengeluarkan inputan string atau dari input tag, Expression juga bisa mengkalkulasi 
+         number
+    -->
+    <p>Penggunaan Expressin Pada Number</p>
+    <div>Hasil Dari 10 + 10 = {{10 + 10}}</div>
+    <div>Hasil Dari 10 - 10 = {{10 - 10}}</div>
+    <div>Hasil Dari 10 / 10 = {{10 / 10}}</div>
+    <div>Hasil Dari 10 * 10 = {{10 * 10}}</div>
+</body>
+
+</html>
