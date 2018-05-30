@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myLanguageApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <title>AngularJS | MVC (Model View Controller</title>
+</head>
+
+<body>
+    <div ng-controller="Languages">
+        Select Your Languages :
+        <button ng-click="php()">PHP</button>
+        <button ng-click="java()">Java</button>
+        <button ng-click="angularjs()">AngularJS</button>
+        <button ng-click="ruby()">Ruby</button>
+
+        <p>Your Selected Languages is : {{myFavouriteLanguage}}</p>
+    </div>
+
+    <script>
+        var application = angular.module('myLanguageApp', []);
+        application.controller('Languages', function($scope) {
+            $scope.myFavouriteLanguage = 'None';
+
+            $scope.php = function() {
+                $scope.myFavouriteLanguage = 'PHP';
+            };
+
+            $scope.java = function() {
+                $scope.myFavouriteLanguage = 'Java';
+            };
+
+            $scope.angularjs = function() {
+                $scope.myFavouriteLanguage = 'Angular Js';
+            };
+
+            $scope.ruby = function() {
+                $scope.myFavouriteLanguage = 'Ruby';
+            };
+        });
+    </script>
+</body>
+
+</html>
