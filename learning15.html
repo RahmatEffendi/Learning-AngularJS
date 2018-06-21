@@ -7,18 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="ctrlLearn13.js"></script>
-    <title>Angular JS | Search Box</title>
+    <title>Angular JS | Search Box Advance</title>
 </head>
 
 <body ng-app="mainApp">
     <div ng-controller="people">
-        <input type="text" placeholder="Search by Name" ng-model="searchBox">
         <ul>
             <h1>List Dari Pahalawan Nasional :</h1>
-            <li ng-repeat="person in persons | filter:searchBox">
+            <li ng-repeat="person in persons | filter:globalSearch">
                 {{person.Name + ' : ' + person.Age + ' : ' + person.Address}}
             </li>
         </ul>
+
+        <div ng-model="searchBoxes">
+            <input type="text" placeholder="Global Search Filter" ng-model="globalSearch.$"><br>
+            <input type="text" placeholder="Name Search Filter" ng-model="globalSearch.Name"><br>
+            <input type="text" placeholder="Age Search Filter" ng-model="globalSearch.Age"><br>
+        </div>
     </div>
 </body>
 
