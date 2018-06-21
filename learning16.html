@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="ctrlLearn16.js"></script>
+    <title>Angular JS | Passing Data From Between Different scope</title>
+</head>
+
+<body ng-app="mainApp">
+    <input type="text" placeholder="Message 1" ng-model="pesan.property">
+    <p ng-repeat="i in [1]">
+        <input type="text" placeholder="Message 2" ng-model="pesan.property"> You Wrote : {{pesan.property}}
+    </p>
+    You Wrote : {{pesan.property}}
+</body>
+
+</html>
