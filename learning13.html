@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="ctrlLearn13.js"></script>
+    <title>Angular JS | $Http Service</title>
+</head>
+
+<body ng-app="mainApp">
+    <div ng-controller="people">
+        <ul>
+            <h1>List Dari Pahalawan Nasional :</h1>
+            <li ng-repeat="person in persons">
+                {{person.Name + ' : ' + person.Age + ' : ' + person.Address}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

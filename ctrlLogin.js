@@ -6,6 +6,13 @@ app.config(function($routeProvider) {
             templateUrl: 'login.html'
         })
         .when('/dashboard', {
+            resolve: {
+                "check": function($location, $rootScope) {
+                    if (!$rootScope.$loggedIn) {
+                        $location.path('/');
+                    }
+                }
+            },
             templateUrl: 'dashboard.html'
         })
         .when('/user', {
@@ -16,11 +23,10 @@ app.config(function($routeProvider) {
         });
 })
 
-app.controller('loginCtrl', function($scope, $location) {
+app.controller('loginCtrl', function($scope, $location, $rootScope) {
     $scope.submit = function() {
-        var username = $scope.username;
-        var password = $scope.password;
         if ($scope.username == 'admin' && $scope.password == 'admin') {
+            $rootScope.$loggedIn = true;
             $location.path('/dashboard');
         } else if ($scope.username == 'user' && $scope.password == 'user') {
             $location.path('/user');

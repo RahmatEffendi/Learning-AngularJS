@@ -1,0 +1,23 @@
+{
+    "record": [{
+            "Name": "Rahmat",
+            "Age": "22",
+            "Address": "Jakarta Utara"
+        },
+        {
+            "Name": "Janu",
+            "Age": "33",
+            "Address": "Jakarta Timur"
+        },
+        {
+            "Name": "Asim",
+            "Age": "21",
+            "Address": "Kerawang"
+        },
+        {
+            "Name": "Irga",
+            "Age": "12",
+            "Address": "Bekasi"
+        }
+    ]
+}
